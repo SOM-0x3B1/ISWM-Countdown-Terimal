@@ -1,0 +1,11 @@
+#ETR{
+    margin-top: 5ex;
+
+    font-size: 13pt;
+    text-align: center;
+    text-shadow: var(--shadow);
+}
+
+#ETRValue{
+    text-transform: uppercase;
+}

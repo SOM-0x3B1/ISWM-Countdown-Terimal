@@ -5,8 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/progressbar.css">
+    <link rel="stylesheet" href="css/etr.css">    
+    <link rel="stylesheet" href="css/crt.css">    
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <main class="crt">
+        <div id="centerpanel">
+            <span id="fullTitle">
+                <h2 class="cTitle" id="cTitle1">REBOOTING UNIVESRE</h2>
+                <h2 class="cTitle" id="cTitle2">PLEASE STAND BY
+                    <div id="cursor"></div>
+                </h2>                
+            </span>
+
+            <div id="fullProgressBar">
+                <div id="pLines">
+                    <div id="pBG"></div>      
+                    <div id="pFill" class="checked"></div>
+                </div>          
+                <div id="percentage">99.99%</div>
+            </div>
+
+            <div id="ETR">
+                <div id="ETRLabel">ESTIMATED TIME REMAINING:</div>
+                <div id="ETRValue">00 days 00 hours 00 minutes 01 seconds</div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

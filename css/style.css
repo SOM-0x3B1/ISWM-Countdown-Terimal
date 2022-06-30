@@ -1,0 +1,84 @@
+:root{
+    --background01: rgb(11, 12, 10);
+    --foreground01: rgb(156, 216, 165);
+    --foreground02: rgb(206, 255, 213);
+    --shadow: 0 0 25pt var(--foreground01),  0 0 10pt var(--foreground01),  0 0 2pt var(--foreground01);
+    --shadow-low: 0 0 10pt var(--foreground01);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 12pt;
+    font-family: 'Courier', monospace;
+    letter-spacing: 1pt;
+    text-shadow: var(--shadow);    
+
+    color: var(--foreground01);
+    background-color: var(--background01)
+}
+
+main{
+    display: inline;
+    width: 90%;
+    max-width: 12cm;
+}
+
+#fullTitle{
+    display: block;
+}
+
+.cTitle{
+    text-align: center;    
+    width: 100%;
+}
+
+#cTitle2{
+    display: inline-block;
+    text-indent: 1ex;
+}
+
+#cursor{
+    display: inline-block;
+    height: 14pt;
+    width: 10pt;
+
+    background-color: var(--foreground01);
+    border-radius: 2pt;
+    box-shadow: var(--shadow);
+
+    opacity: 1;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+    30%{
+        opacity: 0;
+    }
+    75% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
