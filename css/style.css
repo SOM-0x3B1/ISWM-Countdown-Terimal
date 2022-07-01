@@ -4,6 +4,15 @@
     --foreground02: rgb(206, 255, 213);
     --shadow: 0 0 25pt var(--foreground01),  0 0 10pt var(--foreground01),  0 0 2pt var(--foreground01);
     --shadow-low: 0 0 10pt var(--foreground01);
+    --shadow-bg: 0 0 20pt var(--background01);
+}
+
+@font-face {
+    font-family: 'disposabledroid_bbregular';
+    src: url('font/disposabledroid-bb.regular-webfont.woff2') format('woff2'),
+         url('font/disposabledroid-bb.regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 *{
@@ -12,25 +21,37 @@
 }
 
 body{
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
-
     font-size: 12pt;
     font-family: 'Courier', monospace;
     letter-spacing: 1pt;
     text-shadow: var(--shadow);    
 
-    color: var(--foreground01);
-    background-color: var(--background01)
+    color: var(--foreground01); 
+}
+
+#screen{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background01);
+}
+
+.dirty::before{
+    width: 100%;
+    height: 100%;
+    background-image: url('../media/old_screen_overlay.png');
+    background-size: cover;
+    content:"";
+    position:fixed;
+    display:inline-block;
 }
 
 main{
     display: inline;
     width: 90%;
-    max-width: 12cm;
+    max-width: 12cm;    
 }
 
 #fullTitle{

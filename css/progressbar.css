@@ -28,7 +28,7 @@
 
 #pFill{
     position: inherit;
-    width: 99.99%;
+    width: 25.56%;
     height: 100%;
     background-color: var(--foreground01);   
 }
@@ -49,14 +49,30 @@
     position: absolute;
     width: calc(100% - 0.2ex);
     height: 100%;
-    z-index: 2;
+    z-index: 3;
 
     color: var(--foreground02);
-    font-family: 'VT323', monospace;
+    font-family: 'disposabledroid_bbregular', 'VT323', monospace;
     font-size: 44pt;    
-    letter-spacing: 2pt;
+    letter-spacing: 4pt;
     text-align: right;
     text-shadow: var(--shadow);
+    filter: blur(0.6px);
     
-    transform: translate(0, -0.2ex);
+    transform: translate(0, 0.3ex);
+}
+
+#percentage::before{
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 8px, 4px 100%;
+    pointer-events: none;
+    opacity: 0.3;
 }
