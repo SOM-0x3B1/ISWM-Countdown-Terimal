@@ -21,26 +21,41 @@
 }
 
 body{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    vertical-align: middle;
+
+    width: 100vw;
+    height: 100vh;
+
     font-size: 12pt;
     font-family: 'Courier', monospace;
     letter-spacing: 1pt;
     text-shadow: var(--shadow);    
 
     color: var(--foreground01); 
+    background-color: black;
 }
 
 #screen{
     display: flex;
-    height: 100vh;
-    width: 100vw;
     justify-content: center;
     align-items: center;
+    /*height: 100vh;
+    width: 100vw;*/
+    height: 92vh;
+    width: 95vw;
+
+    border-radius: 8vh;
+
     background-color: var(--background01);
+    box-shadow: inset 0 0 2vw black, inset 0 0 4vw black;
 }
 
-.dirty::before{
-    width: 100%;
-    height: 100%;
+.dirty::before{  
+    height: 92vh;
+    width: 95vw;
     background-image: url('../media/old_screen_overlay.png');
     background-size: cover;
     content:"";
@@ -50,7 +65,7 @@ body{
 
 main{
     display: inline;
-    width: 90%;
+    width: 90%;    
     max-width: 12cm;    
 }
 
