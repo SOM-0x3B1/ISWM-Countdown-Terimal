@@ -1,5 +1,5 @@
-const countDownDate = new Date("2022-011-02T21:00:00.000+02:00").getTime();
-const originDate = new Date("2022-02-04T21:00:00.000+02:00").getTime();
+const countDownDate = new Date("2022-12-24T00:00:00.000+02:00");
+const originDate = new Date("2022-12-20T00:00:00.000+02:00");
 
 // Calculate milliseconds in a year
 const pSecond = 1000;
@@ -63,6 +63,7 @@ async function connect() {
     startCountDown();
 }
 
+
 async function startCountDown() {
     abg.play();
 
@@ -78,21 +79,19 @@ async function startCountDown() {
             clearInterval(x);
 
             aend.play();
-            document.getElementById('h2').innerHTML = 'REBOOT COMPLETE<br>THANK YOU FOR WATCHING';
+            document.getElementById('cTitle1Text').innerHTML = 'REBOOT COMPLETE';
+            document.getElementById('cTitle2Text').innerHTML = 'THANK YOU FOR WATCHING';
             document.getElementById('cursor').innerText = '♥';
             document.getElementById("cursor").style.fontSize = '20pt';
 
             document.getElementById("percentage").innerText = '100%';
-            document.getElementById("fill").style.width = '100%';
-            document.getElementById("p_1").innerText = "THE WEBSITE WILL BE REPURPOSED,";
-            document.getElementById("time").innerText = "so don't forget about this place".toUpperCase();
+            document.getElementById("pFill").style.width = '100%';
 
             await sleep(2000);
             aupdate.play();
-            document.getElementById("info").style.display = 'inline-block';
+            /*document.getElementById("info").style.display = 'inline-block';*/
         }
         else {
-
             // Time calculations for days, hours, minutes and seconds
             let days = Math.floor(remaining / pDay);
             let hours = Math.floor((remaining % (pDay)) / (pHour));
@@ -100,18 +99,16 @@ async function startCountDown() {
             let seconds = Math.floor((remaining % (pMinute)) / pSecond);
 
             // Display the result in the element with id="demo"
-            document.getElementById("time").innerText = days + " DAYS " + hours + " HOURS "
-                + minutes + " MINUTES " + seconds + " SECONDS ";
+            document.getElementById("ETRValue").innerText = `${days} DAYS ${hours} HOURS ${minutes} MINUTES ${seconds} SECONDS`;
 
-            let percentage = (Math.floor((100 - (countDownDate - now) / (countDownDate - originDate) * 100) * 100) / 100) + '%'
-
+            let percentage = (Math.floor((100 - (countDownDate - now) / (countDownDate - originDate) * 100) * 100) / 100) + '%';
 
             if (percentage != lastPercentage) {
                 aupdate.play();
                 lastPercentage = percentage;
                 let perc1 = document.getElementById("percentage");
                 perc1.innerText = percentage;
-                document.getElementById("fill").style.width = percentage;
+                document.getElementById("pFill").style.width = percentage;
             }
         }
     }, 1000);

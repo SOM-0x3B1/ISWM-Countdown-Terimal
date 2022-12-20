@@ -33,7 +33,7 @@
 
 #pFill{
     position: inherit;
-    width: 25.56%;
+    width: 0%;
     height: 100%;
     background-color: var(--foreground01);   
 }
