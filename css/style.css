@@ -96,6 +96,23 @@ main{
     animation: blink 1s infinite;
 }
 
+#fullscreen{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 25pt;
+    margin: 1ex;
+    cursor: pointer;
+    
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+#fullscreen:hover{
+    opacity: 1;
+}
+
+
 @keyframes blink {
     0% {
         opacity: 1;
