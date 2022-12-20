@@ -1,5 +1,6 @@
 #ETR{
     height: min-content;
+    width: min-content;
     margin-top: 7ex;
 
     white-space: nowrap;
@@ -7,6 +8,15 @@
     font-size: 15pt;
     text-align: center;
     text-shadow: var(--shadow);
+}
+
+#ETR div{
+    opacity: 0;
+
+    background-color: var(--foreground01);
+    box-shadow: var(--shadow);
+
+    transition: opacity 0.1s;
 }
 
 #ETRValue{

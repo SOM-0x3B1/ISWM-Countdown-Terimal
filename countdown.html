@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The ISWM Countdown Terminal Creator</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/connect.css">
     <link rel="stylesheet" href="css/progressbar.css">
     <link rel="stylesheet" href="css/etr.css">
     <link rel="stylesheet" href="css/crt.css">
@@ -15,13 +16,11 @@
 
 <body>
     <div id="screen" class="dirty">
-        <main class="crt">
+        <main class="crt">    
             <div id="centerpanel">
                 <span id="fullTitle">
-                    <h2 class="cTitle" id="cTitle1">REBOOTING UNIVERSE</h2>
-                    <h2 class="cTitle" id="cTitle2">PLEASE STAND BY
-                        <div id="cursor"></div>
-                    </h2>
+                    <h2 class="cTitle" id="cTitle1"><span id="cTitle1Text"></span><span id="cursor"></span></h2>
+                    <h2 class="cTitle" id="cTitle2"><span id="cTitle2Text"></span></h2>
                 </span>
 
                 <div id="fullProgressBar">
@@ -39,10 +38,14 @@
             </div>
 
             <div id="fullscreen" onclick="toggleFullScreen()">⛶</div>
+
+            <div id="connect" onclick="connect()">connect</div>
         </main>
     </div>
 
     <script src="js/ui.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/audio.js"></script>
 </body>
 
 </html>

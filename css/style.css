@@ -59,8 +59,9 @@ body{
     background-image: url('../media/old_screen_overlay.png');
     background-size: cover;
     content:"";
-    position:fixed;
-    display:inline-block;
+    position: fixed;
+    display: inline-block;
+    pointer-events: none
 }
 
 main{
@@ -84,16 +85,18 @@ main{
 }
 
 #cursor{
-    display: inline-block;
+    display: none;
     height: 14pt;
     width: 10pt;
+    margin-left: 1ex;
+    transform: translate(0, 10%);
 
     background-color: var(--foreground01);
     border-radius: 2pt;
     box-shadow: var(--shadow);
 
     opacity: 1;
-    animation: blink 1s infinite;
+    /*animation: blink 1s infinite;*/
 }
 
 #fullscreen{

@@ -1,11 +1,16 @@
 #fullProgressBar{
     position: relative;
-    width: 100%;
+    width: 0%;
     height: 45pt;
     margin-top: 7ex;
 
-    border: solid var(--foreground01) 2pt;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    border: none;
     box-shadow: var(--shadow-low);
+
+    transition: width 0.3s;
 }
 
 #pLines{
@@ -45,7 +50,7 @@
 }*/
 
 #percentage{
-    display: inline-block;
+    display: none;
     position: absolute;
     width: calc(100% - 0.2ex);
     height: 100%;

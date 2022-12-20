@@ -1,4 +1,4 @@
 /cert
 /node_modules
-/media/*
+/media/
 config.json
