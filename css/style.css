@@ -116,6 +116,18 @@ main{
 }
 
 
+#snow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+
+    opacity: 0.03;
+    filter: blur(5px);
+}
+
+
 @keyframes blink {
     0% {
         opacity: 1;
