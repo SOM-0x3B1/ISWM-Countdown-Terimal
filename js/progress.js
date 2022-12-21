@@ -1,5 +1,5 @@
-const countDownDate = new Date("2022-12-24T00:00:00.000+02:00");
-const originDate = new Date("2022-12-20T00:00:00.000+02:00");
+const countDownDate = new Date("2022-12-24T00:00:00.000");
+const originDate = new Date("2022-12-20T00:00:00.000");
 
 // Calculate milliseconds in a year
 const pSecond = 1000;
@@ -7,7 +7,7 @@ const pMinute = pSecond * 60;
 const pHour = pMinute * 60;
 const pDay = pHour * 24;
 
-const cTitle1Text = "REBOOTING UNIVERSE";
+const cTitle1Text = "INITIATING CHRISTMAS";
 const cTitle2text = "PLEASE STAND BY";
 
 async function connect() {

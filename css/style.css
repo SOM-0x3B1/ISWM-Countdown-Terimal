@@ -20,6 +20,11 @@
     margin: 0;
 }
 
+*::selection{
+    color: var(--background01); 
+    background-color: var(--foreground01);
+}
+
 body{
     display: flex;
     align-items: center;
@@ -28,6 +33,7 @@ body{
 
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 
     font-size: 12pt;
     font-family: 'Courier', monospace;
@@ -125,8 +131,20 @@ main{
 
     opacity: 0.03;
     filter: blur(5px);
+
+    pointer-events: none
 }
 
+#tree{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    filter: blur(10px) brightness(80%) contrast(150%);
+    opacity: 0.1;
+
+    pointer-events: none
+}
 
 @keyframes blink {
     0% {
