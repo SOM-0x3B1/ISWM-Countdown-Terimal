@@ -79,16 +79,16 @@ async function startCountDown() {
             clearInterval(x);
 
             aend.play();
-            document.getElementById('cTitle1Text').innerHTML = 'REBOOT COMPLETE';
-            document.getElementById('cTitle2Text').innerHTML = 'THANK YOU FOR WATCHING';
-            document.getElementById('cursor').innerText = '♥';
-            document.getElementById("cursor").style.fontSize = '20pt';
+            document.getElementById('cTitle1Text').innerHTML = 'SANTA DISPATCHED';
+            document.getElementById('cTitle2Text').innerHTML = 'MERRY CHRISTMAS, CAPTAIN!';
 
             document.getElementById("percentage").innerText = '100%';
             document.getElementById("pFill").style.width = '100%';
 
-            await sleep(2000);
-            aupdate.play();
+            document.getElementById("ETRValue").innerText = `0 DAYS 0 HOURS 0 MINUTES 0 SECONDS`;
+
+            /*await sleep(2000);
+            aupdate.play();*/
             /*document.getElementById("info").style.display = 'inline-block';*/
         }
         else {
