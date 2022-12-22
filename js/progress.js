@@ -1,4 +1,4 @@
-const countDownDate = new Date("2022-12-24T00:00:00.000");
+const countDownDate = new Date("2022-12-25T00:00:00.000");
 const originDate = new Date("2022-12-20T00:00:00.000");
 
 // Calculate milliseconds in a year

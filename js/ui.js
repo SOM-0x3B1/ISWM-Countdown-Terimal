@@ -18,8 +18,12 @@ function toggleFullScreen() {
 }
 
 addEventListener('fullscreenchange', (e) => {
-    if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement)
+    if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement){
         document.getElementById('fullscreen').style.opacity = 0.8;
-    else
+        document.getElementById('yt').style.opacity = 0.8;
+    }
+    else{
         document.getElementById('fullscreen').style.opacity = 0.1;
+        document.getElementById('yt').style.opacity = 0.1;
+    }
 });
