@@ -1,4 +1,4 @@
-#fullProgressBar{
+#fullProgressBar {
     position: relative;
     width: 0%;
     height: 45pt;
@@ -13,16 +13,16 @@
     transition: width 0.3s;
 }
 
-#pLines{
+#pLines {
     position: absolute;
     top: 3pt;
     left: 3pt;
     width: calc(100% - 6pt);
-    height: calc(100% - 6pt);    
+    height: calc(100% - 6pt);
     filter: blur(1px);
 }
 
-#pBG{
+#pBG {
     position: inherit;
     width: 100%;
     height: 100%;
@@ -31,11 +31,11 @@
     opacity: 0.4;
 }
 
-#pFill{
+#pFill {
     position: inherit;
     width: 0%;
     height: 100%;
-    background-color: var(--foreground01);   
+    background-color: var(--foreground01);
 }
 
 /*.checked::before{
@@ -49,7 +49,7 @@
     background-position: 0 0, 10px 0, 10px -10px, 0px 10px;
 }*/
 
-#percentage{
+#percentage {
     display: none;
     position: absolute;
     width: calc(100% - 0.2ex);
@@ -63,11 +63,17 @@
     text-align: right;
     text-shadow: var(--shadow);
     filter: blur(0.6px);
-    
+
     transform: translate(0, 0.4ex);
 }
 
-#percentage::before{
+@-moz-document url-prefix() { 
+    #percentage {
+        transform: none;
+    } 
+}
+
+#percentage::before {
     content: " ";
     display: block;
     position: absolute;

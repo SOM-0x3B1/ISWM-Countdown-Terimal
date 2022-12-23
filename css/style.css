@@ -132,7 +132,7 @@ main{
     left: 0;
     cursor: pointer;
     margin: 2ex;
-    opacity: 0.5;
+    opacity: 0.8;
     transition: opacity 0.5s;
 }
 
